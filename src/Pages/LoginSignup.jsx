@@ -17,7 +17,7 @@ const LoginSignup = () => {
     console.log("Login executed",formData);
    
     let responseData;
-    await fetch('http://localhost:4000/login',{
+    await fetch('https://backend-lcua.onrender.com/login',{
       method:'POST',
       headers:{
         Accept:'application/form-data',

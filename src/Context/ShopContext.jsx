@@ -18,13 +18,13 @@ const ShopContextProvider = (props) => {
   const [all_product , setAll_Product] = useState([]);
   const [cartItems, setCartItems] = useState(getdefaultcart());
 
-  useEffect(() => { fetch('http://localhost:4000/allproducts')
+  useEffect(() => { fetch('https://backend-lcua.onrender.com/allproducts')
       .then((response)=>response.json())
       .then((data) =>setAll_Product(data))
 
 
       if(localStorage.getItem('auth-token')){
-        fetch('http://localhost:4000/getcart',{
+        fetch('https://backend-lcua.onrender.com/getcart',{
           method: 'POST',
           headers:{
             Accept:'application/form-data',
@@ -46,7 +46,7 @@ const ShopContextProvider = (props) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
   
     if (localStorage.getItem('auth-token')) {
-      fetch('http://localhost:4000/addtocart', {
+      fetch('https://backend-lcua.onrender.com/addtocart', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -67,7 +67,7 @@ const ShopContextProvider = (props) => {
     if(localStorage.getItem("auth-token")){
 
 
-      fetch('http://localhost:4000/removefromcart', {
+      fetch('https://backend-lcua.onrender.com/removefromcart', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
