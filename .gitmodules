@@ -1,0 +1,3 @@
+[submodule "EcommerceWebsite"]
+	path = EcommerceWebsite
+	url = https://github.com/MoAftaab/EcommerceWebsite.git
