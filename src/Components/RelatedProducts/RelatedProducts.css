@@ -1,0 +1,40 @@
+.relatedproducts {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px; /* Added padding for better spacing on smaller screens */
+  height: auto; /* Removed fixed height for better responsiveness */
+}
+
+.relatedproducts h1 {
+  color: #171717;
+  font-size: 40px; /* Reduced font size for smaller screens */
+  font-weight: 600;
+}
+
+.relatedproducts hr {
+  width: 100%;
+  max-width: 200px; /* Adjusted max-width for smaller screens */
+  height: 6px;
+  border-radius: 10px;
+  background: #252525;
+}
+
+.relatedproducts-item {
+  margin-top: 30px; /* Reduced top margin for better spacing on smaller screens */
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+  gap: 20px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .relatedproducts h1 {
+    font-size: 30px;
+  }
+
+  .relatedproducts-item {
+    margin-top: 20px;
+  }
+}
